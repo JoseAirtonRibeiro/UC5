@@ -57,16 +57,22 @@ ent_prod_desc= Entry(frame_cadastro_prod, border=0, background=fundo, foreground
 ent_prod_cod= Entry(frame_cadastro_prod, border=0, background=fundo, foreground='white', font=letra)
 ent_prod_codfabri= Entry(frame_cadastro_prod, border=0, background=fundo, foreground='white', font=letra)
 
+ent_prod_nome= Entry(frame_cadastro_prod, border=0, background=fundo, foreground='white', font=letra )
+ent_prod_codfabri2= Entry(frame_cadastro_prod, border=0, background=fundo, foreground='white', font=letra )
 
 
 
 
+
+
+ent_prod_nome.place(width=320, height=28, x=572, y=148)
+ent_prod_codfabri2.place(width=141, height=22, x=574, y=211)
 
 ent_prod_desc.place(width=314, height=18, x=34, y=157)
 ent_prod_cod.place(width=141, height=23, x=32, y=210)
 ent_prod_codfabri.place(width=314, height=22, x=34, y=261)
 
-bt_volt1.place(width=-61, height=-68, x=62, y=69)
+bt_volt1.place(width=48, height=59, x=9, y=12)
 lb_cad.pack()
 #==================================================================================================
 lb_esc= Label(frame_menu_escolha, image=menu_esc, border=0)
@@ -74,15 +80,15 @@ bt_escolha1= Button(frame_menu_escolha, image=compranovo, border=0)
 bt_escolha2= Button(frame_menu_escolha, image=lista, border=0)
 bt_escolha3= Button(frame_menu_escolha, image=altera, border=0)
 bt_escolha4= Button(frame_menu_escolha, image=dele, border=0)
-bt_escolha5= Button(frame_menu_escolha, image=saia, border=0)
-bt_volt2= Button(frame_menu_escolha, image=voltacmg, border=0)
+bt_escolha5= Button(frame_menu_escolha, image=saia, border=0, command=lambda: [frame_menu.pack(), frame_menu_escolha.forget()])
+bt_volt2= Button(frame_menu_escolha, image=voltacmg, border=0, command=lambda: [frame_menu.pack(), frame_menu_escolha.forget()])
 
 bt_escolha1.place(width=225, height=94, x=85, y=144)
 bt_escolha2.place(width=227, height=96, x=330, y=143)
 bt_escolha3.place(width=223, height=92, x=86, y=260)
 bt_escolha4.place(width=223, height=94, x=332, y=259)
 bt_escolha5.place(width=223, height=92, x=655, y=373)
-bt_volt2.place(width=-63, height=-75, x=65, y=77)
+bt_volt2.place(width=48, height=59, x=9, y=12)
 
 lb_esc.pack()
 
@@ -91,32 +97,7 @@ lb_esc.pack()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # ==============================================================================================================
-# tela seleção de login
-# labels
 lb_menu = Label(frame_menu, image=menu, border=0)
 bt_fab = Button(frame_menu,image=fabcmg, border=0, command=lambda: [frame_cadastro_prod.pack(), frame_menu.forget(), frame_menu_escolha.forget()])
 bt_cli = Button(frame_menu,image=clicmg, border=0, command=lambda: [frame_menu_escolha.pack(), frame_menu.forget(), frame_cadastro_prod.forget()])
